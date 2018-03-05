@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="assets/ratchet/css/ratchet.css">
+    <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+    <main>
+
+        <!-- Página home -->
+        <div id="page-home">
+            <header class="bar bar-nav">
+                <section class="title">
+                    Realchats
+                </section>
+            </header>
+
+            <div class="content chat-box">
+                <ul class="table-view">
+                    <li class="table-view-divider">Escolha uma sala</li>
+                    <li class="table-view-cell"><a class="navigate-right" href="#" onclick="entrar('ada')">Ada Lovelace</a></li>
+                    <li class="table-view-cell"><a class="navigate-right" href="#" onclick="entrar('alan')">Alan Turing</a></li>
+                    <li class="table-view-cell"><a class="navigate-right" href="#" onclick="entrar('grace')">Grace Hopper</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Página da sala -->
+        <div id="page-sala">
+
+            <header class="bar bar-nav" id="header-sala">
+                <section class="title">Realchats</section>
+                <button type="button" onclick="sair()" class="btn pull-left">Sair</button>
+            </header>
+
+            <div class="content">
+                <!-- Exibe as mensagens -->
+                <div class="box-mensagens"></div>
+
+                <div class="bar bar-standard bar-footer">
+                  <a class="icon icon-compose pull-left"></a>
+                  <a class="icon icon-gear pull-right"></a>
+                </div>
+
+                <footer class="bar bar-standard bar-footer">
+                    <form>
+                        <input type="text" name="mensagem" id="mensagem">
+                        <a class="icon icon-right-nav pull-right" type="button" href="javascript:void(0)" onclick="enviarMensagem()"></a>
+                    </form>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBQjjRssZ7jIgcMnoPY37zoQD0ZVjbDzas",
+        authDomain: "chat-a45c9.firebaseapp.com",
+        databaseURL: "https://chat-a45c9.firebaseio.com",
+        projectId: "chat-a45c9",
+        storageBucket: "chat-a45c9.appspot.com",
+        messagingSenderId: "320574609837"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/*
+Estilização global
+*/
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html, body, img {
+    height: 100%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*
+Paginas
+*/
+#page-home{
+    padding-left: 0;
+}
+
+#page-sala{
+    display: none;
+}
+
+#mensagem{
+    margin-top: 4px;
+    display: inline-block;
+    width: 90%;
+    border-radius: 18px;
+}
+
+.row{
+    padding: 10px 0;
+    position: relative;
+}
+
+.card{
+    text-align: center;
+    padding: 10px;
+    background: #74b9ff;
+    border: none;
+}
+
+#page-sala .content{
+    background: #2d3436;
+}
+
+.table-view{
+    margin: 0!important;
+}
+
+.table-view-divider{
+    border-top: none;
+}
+
+/*
+Bolhas
+*/
+.bubble
+{
+    position: relative;
+    width: 67%;
+    padding: 9px 10px;
+    background: rgb(255, 255, 255);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 3px;
+    text-align: right;
+    right: 15px;
+    color: rgb(39, 39, 39);
+    display: inline-block;
+    float: right;
+    margin-bottom:  15px;
+    font-size: 13px;
+    box-shadow: 0 2px 2px #00000030;
+    line-height: 1.3em;
+}
